@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -10,10 +9,13 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="
+    overflow-x: hidden;
+    /* overflow: hidden; */
+">
     <!-- Image and text -->
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="#">
@@ -63,10 +65,10 @@
 
 
         <div class="card bg-dark text-white">
-            <img class="card-img"
+            <img class="card-img w-100"
                 src="https://images-na.ssl-images-amazon.com/images/S/stores-image-uploads-na-prod/f/AmazonStores/ATVPDKIKX0DER/d538f348079d5feeb2a71e70311c2a00.w1773.h1182._CR0%2C147%2C1773%2C886_.jpg"
-                alt="Card image">
-            <div class="card-img-overlay">
+                alt="Card image" style="width:100%">
+            <div class="card-img-overlay right-0 bottom-0  ">
                 <a href="#" class="btn btn-primary">kEYBORD</a>
             </div>
         </div>
@@ -91,7 +93,7 @@
             Create equal-width columns that span multiple rows by inserting a .w-100 where you want the columns to break
             to a new
             line. Make the breaks responsive by ...
-            ‎How it works · ‎Auto-layout columns · ‎Responsive classes · ‎Alignment
+            &lrm;How it works · &lrm;Auto-layout columns · &lrm;Responsive classes · &lrm;Alignment
 
             bootstrap new line Code Example - Code Grepperhttps://www.codegrepper.com › code-examples › css
             More answers related to “bootstrap new line” ... divide page into 2 columns · how to divide pages into 12
@@ -187,7 +189,7 @@
             </div>
             <!-- Grid container -->
 
-           
+
         </footer>
 
 
@@ -200,6 +202,46 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
             integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
             crossorigin="anonymous"></script>
+        <!-- Code injected by live-server -->
+        <script type="text/javascript">
+            // <![CDATA[  <-- For SVG support
+            if ('WebSocket' in window) {
+                (function () {
+                    function refreshCSS() {
+                        var sheets = [].slice.call(document.getElementsByTagName("link"));
+                        var head = document.getElementsByTagName("head")[0];
+                        for (var i = 0; i < sheets.length; ++i) {
+                            var elem = sheets[i];
+                            var parent = elem.parentElement || head;
+                            parent.removeChild(elem);
+                            var rel = elem.rel;
+                            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                                elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                            }
+                            parent.appendChild(elem);
+                        }
+                    }
+                    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                    var address = protocol + window.location.host + window.location.pathname + '/ws';
+                    var socket = new WebSocket(address);
+                    socket.onmessage = function (msg) {
+                        if (msg.data == 'reload') window.location.reload();
+                        else if (msg.data == 'refreshcss') refreshCSS();
+                    };
+                    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                        console.log('Live reload enabled.');
+                        sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                    }
+                })();
+            }
+            else {
+                console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+            }
+	// ]]>
+        </script>
+
+    </div>
 </body>
 
 </html>
